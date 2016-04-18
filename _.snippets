@@ -1,0 +1,39 @@
+snippet exprom export function using promise
+	export function ${1:fname} (${2:params}) {
+		return new Promise(async (resolve, reject) => {
+			try {
+				${0}
+			} catch (err) {
+				reject(err)
+			}
+		})
+	}
+
+snippet caw const name = await
+	const ${1:name} = await ${0}
+
+snippet if
+	if (${1:condition}) {
+		${0}
+	}
+
+snippet ife
+	if (${1:lcond} === ${2:rcond}) {
+		${0}
+	}
+
+snippet ifne
+	if (${1:lcond} !== ${2:rcond}) {
+		${0}
+	}
+
+snippet else
+	else {
+		${0}
+	}
+
+snippet rr return resolve()
+	return resolve(${0})
+
+snippet rrn return resolve()
+	return resolve(null)
