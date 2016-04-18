@@ -37,3 +37,44 @@ snippet rr return resolve()
 
 snippet rrn return resolve()
 	return resolve(null)
+
+snippet it mocha it
+	it('${1:does something}', () => {
+		${0}
+	})
+
+
+snippet ita mocha it
+	it('${1:does something}', async () => {
+		${0}
+	})
+
+snippet af arrow function
+	(${1:params}) => {
+		${0}
+	}
+
+snippet aaf async arrow function
+	async (${1:params}) => {
+		${0}
+	}
+
+snippet eaf empty arrow function
+	(${1:params}) => {
+		${0}
+	}
+
+
+snippet eaaf empty arrow function
+	async (${1:params}) => {
+		${0}
+	}
+
+snippet exe expect to exist
+	expect(${1:expr}).to.exist
+
+snippet exeq expect to eql
+	expect(${1:expr}).to.eql(${0:value})
+
+snippet exl expect to have length
+	expect(${1:expr}).to.have.length(${0:value})
