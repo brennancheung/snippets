@@ -9,6 +9,29 @@ snippet exprom export function using promise
 		})
 	}
 
+snippet cc react create class
+	import * as React from 'react'
+
+	const ${1:classname} = React.createClass({
+		getInitialState: function () {
+			return {
+			}
+		},
+
+		render: function () {
+			return (
+				<div>
+					${0}
+				</div>
+			)
+		}
+	})
+	export default $1
+
+snippet exf export function
+	export function ${1:fname} (${2:params}) {
+	}
+
 snippet caw const name = await
 	const ${1:name} = await ${0}
 
@@ -70,11 +93,20 @@ snippet eaaf empty arrow function
 		${0}
 	}
 
+snippet ext expect to
+	expect(${1:expr}).to.${0}
+
 snippet exe expect to exist
 	expect(${1:expr}).to.exist
 
+snippet exne expect to not exist
+	expect(${1:expr}).to.not.exist
+
 snippet exeq expect to eql
 	expect(${1:expr}).to.eql(${0:value})
+
+snippet exneq expect to not eql
+	expect(${1:expr}).to.not.eql(${0:value})
 
 snippet exl expect to have length
 	expect(${1:expr}).to.have.length(${0:value})
