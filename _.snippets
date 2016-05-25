@@ -33,6 +33,26 @@ snippet rcc react component class
 	
 	export default $1
 #
+snippet rme react method empty params
+	${1:methodName} = () => {
+		const { dispatch } = this.props
+		${0}
+	}
+#
+snippet rm react method
+	${1:methodName} = (${2:params}) => {
+		const { dispatch } = this.props
+		${0}
+	}
+#
+snippet rmh react method handler
+	${1:methodName} = (${2:params}) => {
+		const { dispatch } = this.props
+		return () => {
+			${0}
+		}
+	}
+#
 snippet mstp mapStateToProps
 	function mapStateToProps (state) {
 		return {
@@ -83,20 +103,17 @@ snippet reducer redux reducer
 snippet connect react-redux connect
 	import { connect } from 'react-redux'
 
-	const ${1:ComponentName} = connect(
-		(state) => {
-			${2:// mapStateToProps}
-		},
-		(dispatch) => {
-			${3:// mapDispatchToProps}
+	function mapStateToProps (state) {
+		return {
 		}
-	)((props) => {
-		return (
-			${0}
-		)
-	})
+	}
 
-	export default $1
+	function mapDispatchToProps (dispatch) {
+		return {
+		}
+	}
+
+	@connect(mapStateToProps, mapDispatchToProps)
 #
 snippet redcase reducer case statement
 	case ${1:ACTION}:
