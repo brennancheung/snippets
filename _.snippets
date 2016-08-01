@@ -4,6 +4,15 @@ snippet im import from
 snippet imd import dereferenced from
 	import { ${1:imports} } from '${2}'
 #
+snippet prom export function using promise
+	return new Promise(async (resolve, reject) => {
+		try {
+			${0}
+		} catch (err) {
+			reject(err)
+		}
+	})
+#
 snippet exprom export function using promise
 	export function ${1:fname} (${2:params}) {
 		return new Promise(async (resolve, reject) => {
