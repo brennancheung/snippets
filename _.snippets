@@ -185,8 +185,13 @@ snippet c console.log()
 snippet cq console.log('')
 	console.log(\`${1}\`)
 #
+snippet des mocha describe
+	describe('${1:context}', async () => {
+		${0}
+	})
+#
 snippet it mocha it
-	it('${1:does something}', () => {
+	it('${1:does something}', async () => {
 		${0}
 	})
 #
