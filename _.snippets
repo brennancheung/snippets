@@ -65,6 +65,9 @@ snippet rcc react component class
 	
 	export default $1
 #
+snippet ct const dispatch
+	const { dispatch${0} } = this.props
+#
 snippet rme react method empty params
 	${1:methodName} = () => {
 		const { dispatch } = this.props
