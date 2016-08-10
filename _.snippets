@@ -70,7 +70,7 @@ snippet ct const dispatch
 #
 snippet actm action method
 	export function ${1:actionName} () {
-		return async (dispatch, getState) => {
+		return (dispatch, getState) => {
 			return new Promise(async (resolve, reject) => {
 				try {
 					${0}
