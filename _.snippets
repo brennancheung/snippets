@@ -1,15 +1,12 @@
 snippet im import from
-	import ${1:module} from '$1'
-#
-snippet imd import dereferenced from
-	import { ${1:imports} } from '${2}'
+	import ${1:module} from '$1';
 #
 snippet prom export function using promise
 	return new Promise(async (resolve, reject) => {
 		try {
 			${0}
 		} catch (err) {
-			reject(err)
+			reject(err);
 		}
 	})
 #
@@ -21,14 +18,14 @@ snippet exprom export function using promise
 			} catch (err) {
 				reject(err)
 			}
-		})
+		});
 	}
 #
 snippet try
 	try {
 		${0}
 	} catch (err) {
-		console.log(err)
+		console.log(err);
 	}
 #
 snippet crcc connected react component class
@@ -53,20 +50,21 @@ snippet crcc connected react component class
 	export default $1
 #
 snippet rcc react component class
-	import React from 'react'
+	import PropTypes from 'prop-types';
+	import React from 'react';
 
 	class ${1:ClassName} extends React.Component {
-		render () {
+		render() {
 			return (
 				${0}
-			)
+			);
 		}
 	}
 	
-	export default $1
+	export default $1;
 #
 snippet ct const dispatch
-	const { dispatch${0} } = this.props
+	const { dispatch${0} } = this.props;
 #
 snippet actm action method
 	export function ${1:actionName} () {
@@ -89,7 +87,6 @@ snippet rme react method empty params
 #
 snippet rm react method
 	${1:methodName} = (${2:params}) => {
-		const { dispatch } = this.props
 		${0}
 	}
 #
@@ -170,27 +167,24 @@ snippet redcase reducer case statement
 		}
 #
 snippet f function
-	function ${1:name} (${2:params}) {
+	function ${1:name}(${2:params}) {
 		${0}
 	}
 #
 snippet sf simple function with no params
-	function ${1:name} () {
+	function ${1:name}() {
 		${0}
 	}
 #
 snippet exf export function
-	export function ${1:fname} (${2:params}) {
+	export function ${1:fname}(${2:params}) {
 		${0}
 	}
 #
 snippet exdf export function
-	export default function ${1:fname} (${2:params}) {
+	export default function ${1:fname}(${2:params}) {
 		${0}
 	}
-#
-snippet caw const name = await
-	const ${1:name} = await ${0}
 #
 snippet if
 	if (${1:condition}) {
@@ -218,8 +212,15 @@ snippet rr return resolve()
 snippet rrn return resolve()
 	return resolve(null)
 #
-snippet c console.log()
-	console.log(${1})
+snippet c console.info()
+	console.info(${1});
+#
+snippet cd console.info()
+	/* eslint-disable no-console */
+	console.info('---------------------------');
+	console.info(${1});
+	console.info('===========================');
+	/* eslint-enable no-console */
 #
 snippet cq console.log('')
 	console.log(\`${1}\`)
