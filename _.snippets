@@ -31,15 +31,6 @@ snippet try
 		console.log(err)
 	}
 #
-snippet csfc create functional component
-	import React from 'react'
-
-	const ${1:CompoentName} = () => (
-
-	)
-	
-	export default $1
-#
 snippet crcc connected react component class
 	/* eslint-disable react/prop-types */
 	import React from 'react'
@@ -61,10 +52,23 @@ snippet crcc connected react component class
 	
 	export default $1
 #
-snippet rcc react component class
+snippet fc react functional component
+	import React from 'react'
+
+	const ${1:ClassName} = ({ props }) => (
+		${0}
+	)
+
+	export default $1
+#
+snippet cc react component class
 	import React from 'react'
 
 	class ${1:ClassName} extends React.Component {
+		constructor (props) {
+			super(props)
+		}
+
 		render () {
 			return (
 				${0}
@@ -126,24 +130,6 @@ snippet mdtp mapDispatchToProps
 #
 snippet tp this.props.
 	this.props.
-snippet cc react create class
-	import * as React from 'react'
-
-	const ${1:classname} = React.createClass({
-		getInitialState: function () {
-			return {
-			}
-		},
-
-		render: function () {
-			return (
-				<div>
-					${0}
-				</div>
-			)
-		}
-	})
-	export default $1
 #
 snippet reducer redux reducer
 	function ${1:name}Reducer (state, action) {
