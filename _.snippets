@@ -61,6 +61,17 @@ snippet fc react functional component
 
 	export default $1
 #
+snippet fcf react functional component
+	import React from 'react'
+
+	const ${1:ClassName} = ({ match }) => {
+		return (
+			${0}
+		)
+	}
+
+	export default $1
+#
 snippet cc react component class
 	import React from 'react'
 
@@ -80,6 +91,9 @@ snippet cc react component class
 #
 snippet ct const dispatch
 	const { dispatch${0} } = this.props
+#
+snippet prej pre json
+	<pre>{JSON.stringify(${0}, null, 4)}</pre>)
 #
 snippet actm action method
 	export function ${1:actionName} () {
